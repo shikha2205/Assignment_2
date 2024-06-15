@@ -1,0 +1,33 @@
+package ASSIGNMENT_2;
+
+public class moveZeroes {
+    public static void main(String[] args){
+        int[]arr={0,10,22,8,0,5,0};
+        movezeroes(arr);
+        for(int n=0;n<arr.length;n++){
+            System.out.print(arr[n]+" ");
+        }
+        
+
+    }
+    public static void movezeroes(int[]arr){
+        if(arr.length==0&&arr.length==1){
+            return;
+        }
+        int nz=0;
+        int z=0;
+        while(nz<arr.length){
+            if(arr[nz]!=0){
+                int temp=arr[nz];
+                arr[nz]=arr[z];
+                arr[z]=temp;
+                nz++;
+                z++;
+            }
+            else{
+                nz++;
+            }
+        }
+    }    
+}
+
